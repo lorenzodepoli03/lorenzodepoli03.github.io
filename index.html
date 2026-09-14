@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="it">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flow — dettatura vocale e note</title>
+<style>
+  :root { color-scheme: light; }
+  body {
+    margin: 0; padding: 48px 22px 80px;
+    background: #eeeae4; color: #1a1a1a;
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { max-width: 640px; margin: 0 auto; }
+  h1 { font-size: 34px; margin: 0 0 4px; letter-spacing: -0.5px; }
+  .sotto { color: #8a8178; margin: 0 0 36px; font-size: 17px; }
+  h2 { font-size: 19px; margin: 34px 0 8px; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  a { color: #0f766e; }
+  .nota {
+    background: #fff; border: 1px solid #e6e1d8; border-radius: 12px;
+    padding: 16px 18px; margin: 30px 0;
+  }
+  footer {
+    margin-top: 44px; padding-top: 18px; border-top: 1px solid #e6e1d8;
+    color: #8a8178; font-size: 14px;
+  }
+  footer a { font-weight: 600; }
+</style>
+
+<main>
+  <h1>Flow</h1>
+  <p class="sotto">Dettatura vocale e note, per Windows.</p>
+
+  <p>
+    Flow è un'applicazione desktop personale. Si tiene premuta una
+    scorciatoia, si parla, e il testo trascritto e ripulito compare nel campo
+    in cui si stava scrivendo — in qualsiasi programma.
+  </p>
+
+  <h2>Cosa fa</h2>
+  <ul>
+    <li><strong>Dettatura</strong> — parli, il testo appare dove stavi scrivendo.</li>
+    <li><strong>Traduzione</strong> — parli in italiano, esce in inglese.</li>
+    <li><strong>Note</strong> — un tasto apposta per fermare un pensiero: le
+      note restano in un archivio locale, raggruppate per argomento.</li>
+    <li><strong>Eventi</strong> — quando una nota contiene una data
+      («lunedì mattina», «a gennaio»), Flow la riconosce e te la propone.
+      Se confermi, l'evento viene creato sul tuo Google Calendar.</li>
+  </ul>
+
+  <h2>Google Calendar</h2>
+  <p>
+    Il collegamento a Google Calendar è facoltativo e serve a una cosa sola:
+    creare, aggiornare ed eliminare gli eventi che l'utente ha
+    <strong>esplicitamente confermato</strong> dentro Flow. Nient'altro del
+    calendario viene letto o modificato.
+  </p>
+
+  <div class="nota">
+    <strong>Dove stanno i dati.</strong> Note, trascrizioni e credenziali
+    restano sul computer di chi usa l'applicazione. Flow non ha un server e
+    non raccoglie niente.
+    <br><br>
+    I dettagli sono nelle <a href="privacy.html">norme sulla privacy</a>.
+  </div>
+
+  <h2>In breve, in inglese</h2>
+  <p>
+    Flow is a personal desktop app for Windows: push-to-talk dictation,
+    Italian&nbsp;→&nbsp;English translation, and voice notes kept in a local
+    archive. When a note contains a date, Flow proposes an event; if the user
+    confirms it, the event is created on their Google Calendar using the
+    <code>calendar.events</code> scope. Notes, transcripts and credentials stay
+    on the user's computer — there is no server and nothing is collected.
+  </p>
+
+  <footer>
+    <a href="privacy.html">Norme sulla privacy</a> ·
+    Applicazione personale, non distribuita pubblicamente.
+  </footer>
+</main>
+</html>

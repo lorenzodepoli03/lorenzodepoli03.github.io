@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="it">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flow — norme sulla privacy</title>
+<style>
+  :root { color-scheme: light; }
+  body {
+    margin: 0; padding: 48px 22px 80px;
+    background: #eeeae4; color: #1a1a1a;
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { max-width: 640px; margin: 0 auto; }
+  h1 { font-size: 30px; margin: 0 0 4px; letter-spacing: -0.5px; }
+  .sotto { color: #8a8178; margin: 0 0 36px; font-size: 15px; }
+  h2 { font-size: 18px; margin: 32px 0 8px; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  a { color: #0f766e; }
+  code { background: #fff; border: 1px solid #e6e1d8; border-radius: 5px;
+         padding: 1px 5px; font-size: 14px; }
+  .nota {
+    background: #fff; border: 1px solid #e6e1d8; border-radius: 12px;
+    padding: 16px 18px; margin: 26px 0;
+  }
+  footer {
+    margin-top: 44px; padding-top: 18px; border-top: 1px solid #e6e1d8;
+    color: #8a8178; font-size: 14px;
+  }
+</style>
+
+<main>
+  <h1>Norme sulla privacy</h1>
+  <p class="sotto">Flow — applicazione desktop personale. Ultimo aggiornamento: settembre 2026.</p>
+
+  <p>
+    Flow è un'applicazione che gira sul computer di chi la usa. <strong>Non ha
+    un server</strong>, non ha account, non raccoglie statistiche e non
+    trasmette dati a nessuno se non ai servizi elencati qui sotto, e solo per
+    svolgere la funzione richiesta.
+  </p>
+
+  <h2>Quali dati tratta</h2>
+  <ul>
+    <li><strong>Audio</strong> — registrato solo mentre si tiene premuta la
+      scorciatoia. Viene inviato a un servizio di trascrizione per essere
+      convertito in testo e non viene conservato.</li>
+    <li><strong>Testo</strong> — la trascrizione e le note restano in un
+      archivio locale (un file sul computer dell'utente).</li>
+    <li><strong>Dati di Google Calendar</strong> — vedi la sezione seguente.</li>
+  </ul>
+
+  <h2>Come usa i dati di Google</h2>
+  <p>
+    Il collegamento a Google Calendar è facoltativo. Quando è attivo, Flow
+    richiede un solo ambito di autorizzazione:
+  </p>
+  <p><code>https://www.googleapis.com/auth/calendar.events</code></p>
+  <p>e lo usa esclusivamente per:</p>
+  <ul>
+    <li><strong>creare</strong> un evento quando l'utente conferma
+      esplicitamente, dentro l'applicazione, una data riconosciuta in una sua
+      nota;</li>
+    <li><strong>aggiornare</strong> quell'evento se l'utente ne cambia la data
+      o il titolo;</li>
+    <li><strong>eliminare</strong> quell'evento se l'utente toglie la data o
+      cancella la nota.</li>
+  </ul>
+
+  <div class="nota">
+    Flow agisce <strong>solo sugli eventi che ha creato lui</strong>. Non legge
+    il resto del calendario, non ne elenca il contenuto, non modifica eventi di
+    altra provenienza e non tocca le impostazioni del calendario.
+    Nessun evento viene creato senza una conferma esplicita dell'utente.
+  </div>
+
+  <h2>Dove finiscono</h2>
+  <ul>
+    <li>I dati di Google <strong>non vengono conservati</strong> dall'applicazione:
+      di ogni evento creato resta sul computer dell'utente solo l'identificativo
+      restituito da Google, necessario per poterlo aggiornare o eliminare.</li>
+    <li>Il <strong>token di accesso</strong> viene salvato in un file locale sul
+      computer dell'utente. Non viene trasmesso ad altri.</li>
+    <li>Nessun dato viene condiviso, venduto o ceduto a terzi. Nessun dato
+      viene usato per pubblicità, profilazione o addestramento di modelli.</li>
+  </ul>
+
+  <h2>Servizi esterni</h2>
+  <p>
+    Per trascrivere l'audio e per rileggere le note, Flow invia il contenuto a
+    un fornitore di modelli linguistici scelto da chi usa l'applicazione
+    (per esempio Groq o Anthropic), secondo le norme di quel fornitore. Nessun
+    dato di Google Calendar viene mai inviato a questi servizi.
+  </p>
+
+  <h2>Come revocare l'accesso</h2>
+  <p>
+    In qualsiasi momento, dalle impostazioni dell'applicazione («Scollega»)
+    oppure dal proprio account Google:
+    <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
+    Gli eventi già creati restano sul calendario e possono essere eliminati
+    normalmente da Google Calendar.
+  </p>
+
+  <h2>Summary in English</h2>
+  <p>
+    Flow is a personal desktop application. It has no server and collects
+    nothing. It requests a single Google scope,
+    <code>calendar.events</code>, and uses it only to create, update and delete
+    the calendar events that the user has explicitly confirmed inside the app.
+    It never reads or lists other calendar content and never modifies events it
+    did not create. Google user data is not stored beyond the event identifier
+    needed to update or delete that event, is kept on the user's own computer,
+    and is never shared with third parties, used for advertising, or used to
+    train models. Access can be revoked at any time from the app or from
+    <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
+  </p>
+
+  <footer>
+    <a href="index.html">← Torna alla pagina di Flow</a>
+  </footer>
+</main>
+</html>
